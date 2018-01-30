@@ -13,6 +13,13 @@ sh install.sh
 sh start.sh
 ```
 
+or
+
+```shell
+sh install.sh
+sh watch.sh
+```
+
 Browse to http://localhost:5000/
 
 ## License
