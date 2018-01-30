@@ -6,8 +6,10 @@ export default class App extends React.Component {
     this.state = { subject: "world" };
   }
 
-  componentDidMount() {
-    this.setState(() => ({ subject: "starter" }));
+  async componentDidMount() {
+    const response = await fetch("/api/subject");
+    const subject = await response.json();
+    this.setState(() => ({ subject: subject.name }));
   }
 
   render() {
